@@ -2,5 +2,5 @@ services:
   web:
     build: .
     ports:
-      - "3001:80"
+      - "3002:80"
     restart: unless-stopped
