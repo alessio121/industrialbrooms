@@ -199,24 +199,6 @@ Per trucioli lunghi e materiali aggrovigliati:
 - Pinze 3x1: 540 kg, alta capacità
 - Polipo 2x1.6: 915 kg, per i materiali più difficili
 
-## Personalizzazione
-
-Tutte le nostre scope industriali sono personalizzabili:
-
-**Colori**
-- RAL standard rosso
-- Qualsiasi colore RAL su richiesta
-- Abbinamento ai colori aziendali
-
-**Dimensioni**
-- Modifiche su misura disponibili
-- Adattamento a esigenze specifiche
-
-**Accessori**
-- Fibrilene opzionale per superfici delicate
-- Base in gomma per polipo
-- Struttura rinforzata per uso intensivo
-
 ## Come Scegliere: Checklist
 
 1. **Misurate l'area** da pulire quotidianamente
