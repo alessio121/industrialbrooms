@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Search, Phone, Mail, ChevronDown } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 
@@ -6,6 +7,8 @@ const Header = () => {
   const { t, currentLanguage, changeLanguage } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const languages = [
     { code: 'it', name: 'Italian', flag: '🇮🇹' },
@@ -23,7 +26,13 @@ const Header = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
     setIsMenuOpen(false);
-    
+
+    // If we're not on the home page, navigate there first
+    if (location.pathname !== '/') {
+      navigate('/', { state: { scrollTo: targetId } });
+      return;
+    }
+
     const element = document.getElementById(targetId);
     if (element) {
       element.scrollIntoView({
@@ -50,6 +59,7 @@ const Header = () => {
             <a href="#maka-control" onClick={(e) => handleNavClick(e, 'maka-control')} className="text-white hover:text-gray-200 font-bold text-lg transition-colors cursor-pointer">{t.makaControl}</a>
             <a href="#cassoni" onClick={(e) => handleNavClick(e, 'cassoni')} className="text-white hover:text-gray-200 font-bold text-lg transition-colors cursor-pointer">{t.containers}</a>
             <a href="#tramoggia" onClick={(e) => handleNavClick(e, 'tramoggia')} className="text-white hover:text-gray-200 font-bold text-lg transition-colors cursor-pointer">{t.hopper}</a>
+            <Link to="/blog" className="text-white hover:text-gray-200 font-bold text-lg transition-colors">Blog</Link>
             <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-white hover:text-gray-200 font-bold text-lg transition-colors cursor-pointer">{t.contact}</a>
           </nav>
           
@@ -99,6 +109,7 @@ const Header = () => {
               <a href="#maka-control" onClick={(e) => handleNavClick(e, 'maka-control')} className="block px-3 py-2 text-white hover:text-gray-200 font-bold text-lg cursor-pointer">{t.makaControl}</a>
               <a href="#cassoni" onClick={(e) => handleNavClick(e, 'cassoni')} className="block px-3 py-2 text-white hover:text-gray-200 font-bold text-lg cursor-pointer">{t.containers}</a>
               <a href="#tramoggia" onClick={(e) => handleNavClick(e, 'tramoggia')} className="block px-3 py-2 text-white hover:text-gray-200 font-bold text-lg cursor-pointer">{t.hopper}</a>
+              <Link to="/blog" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-white hover:text-gray-200 font-bold text-lg">Blog</Link>
               <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="block px-3 py-2 text-white hover:text-gray-200 font-bold text-lg cursor-pointer">{t.contact}</a>
               
               {/* Mobile Language Selector */}

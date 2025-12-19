@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 
@@ -43,6 +44,9 @@ const Footer = () => {
               <a href="#tramoggia" className="text-white hover:text-red-500 transition-colors">
                 {t.hopper}
               </a>
+              <Link to="/blog" className="text-white hover:text-red-500 transition-colors">
+                Blog
+              </Link>
               <a href="#contact" className="text-white hover:text-red-500 transition-colors">
                 {t.contact}
               </a>

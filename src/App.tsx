@@ -1,32 +1,29 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { TranslationProvider } from './hooks/useTranslation';
 import SEOHead from './components/SEOHead';
 import Header from './components/Header';
-import Products from './components/Products';
-import ScopaManuale from './components/ScopaManuale';
-import MakaControl from './components/MakaControl';
-import Cassoni from './components/Cassoni';
-import Tramoggia from './components/Tramoggia';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import Blog from './pages/Blog';
+import BlogPost from './pages/BlogPost';
 
 const App = () => {
   return (
-    <TranslationProvider>
-      <SEOHead />
-      <div className="min-h-screen bg-white">
-        <Header />
-        <main>
-          <Products />
-          <ScopaManuale />
-          <MakaControl />
-          <Cassoni />
-          <Tramoggia />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
-    </TranslationProvider>
+    <BrowserRouter>
+      <TranslationProvider>
+        <SEOHead />
+        <div className="min-h-screen bg-white">
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+          </Routes>
+          <Footer />
+        </div>
+      </TranslationProvider>
+    </BrowserRouter>
   );
 };
 
