@@ -48,28 +48,60 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Blog Index -->
   <url>
     <loc>https://industrialbrooms.com/blog</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://industrialbrooms.com/blog?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://industrialbrooms.com/blog?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://industrialbrooms.com/blog?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://industrialbrooms.com/blog?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://industrialbrooms.com/blog?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://industrialbrooms.com/blog"/>
   </url>
+
+  <!-- Blog Article 1: Metal Chips Cleaning -->
   <url>
     <loc>https://industrialbrooms.com/blog/come-pulire-trucioli-metallici-officina</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://industrialbrooms.com/blog/come-pulire-trucioli-metallici-officina?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://industrialbrooms.com/blog/come-pulire-trucioli-metallici-officina?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://industrialbrooms.com/blog/come-pulire-trucioli-metallici-officina?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://industrialbrooms.com/blog/come-pulire-trucioli-metallici-officina?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://industrialbrooms.com/blog/come-pulire-trucioli-metallici-officina?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://industrialbrooms.com/blog/come-pulire-trucioli-metallici-officina"/>
   </url>
+
+  <!-- Blog Article 2: Industrial Broom Guide -->
   <url>
     <loc>https://industrialbrooms.com/blog/guida-scelta-scopa-industriale</loc>
     <lastmod>2025-12-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://industrialbrooms.com/blog/guida-scelta-scopa-industriale?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://industrialbrooms.com/blog/guida-scelta-scopa-industriale?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://industrialbrooms.com/blog/guida-scelta-scopa-industriale?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://industrialbrooms.com/blog/guida-scelta-scopa-industriale?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://industrialbrooms.com/blog/guida-scelta-scopa-industriale?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://industrialbrooms.com/blog/guida-scelta-scopa-industriale"/>
   </url>
+
+  <!-- Blog Article 3: Fork Attachment Brooms -->
   <url>
     <loc>https://industrialbrooms.com/blog/scope-attacco-forche-quando-usarle</loc>
     <lastmod>2025-12-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://industrialbrooms.com/blog/scope-attacco-forche-quando-usarle?lang=it"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://industrialbrooms.com/blog/scope-attacco-forche-quando-usarle?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://industrialbrooms.com/blog/scope-attacco-forche-quando-usarle?lang=fr"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://industrialbrooms.com/blog/scope-attacco-forche-quando-usarle?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://industrialbrooms.com/blog/scope-attacco-forche-quando-usarle?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://industrialbrooms.com/blog/scope-attacco-forche-quando-usarle"/>
   </url>
 </urlset>

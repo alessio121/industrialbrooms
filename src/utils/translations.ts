@@ -221,7 +221,16 @@ export const translations = {
     allRightsReserved: 'Tutti i diritti riservati.',
     privacyPolicy: 'Privacy Policy',
     termsOfService: 'Termini di Servizio',
-    cookiePolicy: 'Cookie Policy'
+    cookiePolicy: 'Cookie Policy',
+
+    // Blog
+    blogSubtitle: 'Guide, consigli e approfondimenti sulla pulizia industriale e le attrezzature professionali.',
+    readArticle: 'Leggi articolo',
+    backToBlog: 'Torna al Blog',
+    needConsultation: 'Hai bisogno di una consulenza?',
+    consultationCTA: 'Contattaci per scoprire quale soluzione è più adatta alle tue esigenze.',
+    contactUsButton: 'Contattaci',
+    relatedArticles: 'Articoli correlati'
   },
 
   en: {
@@ -446,7 +455,16 @@ export const translations = {
     allRightsReserved: 'All rights reserved.',
     privacyPolicy: 'Privacy Policy',
     termsOfService: 'Terms of Service',
-    cookiePolicy: 'Cookie Policy'
+    cookiePolicy: 'Cookie Policy',
+
+    // Blog
+    blogSubtitle: 'Guides, tips and insights on industrial cleaning and professional equipment.',
+    readArticle: 'Read article',
+    backToBlog: 'Back to Blog',
+    needConsultation: 'Need a consultation?',
+    consultationCTA: 'Contact us to find out which solution is best suited to your needs.',
+    contactUsButton: 'Contact Us',
+    relatedArticles: 'Related articles'
   },
 
   fr: {
@@ -671,7 +689,16 @@ export const translations = {
     allRightsReserved: 'Tous droits réservés.',
     privacyPolicy: 'Politique de Confidentialité',
     termsOfService: 'Conditions de Service',
-    cookiePolicy: 'Politique des Cookies'
+    cookiePolicy: 'Politique des Cookies',
+
+    // Blog
+    blogSubtitle: 'Guides, conseils et informations sur le nettoyage industriel et les équipements professionnels.',
+    readArticle: 'Lire l\'article',
+    backToBlog: 'Retour au Blog',
+    needConsultation: 'Besoin d\'une consultation?',
+    consultationCTA: 'Contactez-nous pour découvrir quelle solution est la mieux adaptée à vos besoins.',
+    contactUsButton: 'Contactez-nous',
+    relatedArticles: 'Articles connexes'
   },
 
   es: {
@@ -896,7 +923,16 @@ export const translations = {
     allRightsReserved: 'Todos los derechos reservados.',
     privacyPolicy: 'Política de Privacidad',
     termsOfService: 'Términos de Servicio',
-    cookiePolicy: 'Política de Cookies'
+    cookiePolicy: 'Política de Cookies',
+
+    // Blog
+    blogSubtitle: 'Guías, consejos e información sobre limpieza industrial y equipos profesionales.',
+    readArticle: 'Leer artículo',
+    backToBlog: 'Volver al Blog',
+    needConsultation: '¿Necesitas una consulta?',
+    consultationCTA: 'Contáctanos para descubrir qué solución es la más adecuada para tus necesidades.',
+    contactUsButton: 'Contáctanos',
+    relatedArticles: 'Artículos relacionados'
   },
 
   de: {
@@ -1121,6 +1157,15 @@ export const translations = {
     allRightsReserved: 'Alle Rechte vorbehalten.',
     privacyPolicy: 'Datenschutzrichtlinie',
     termsOfService: 'Nutzungsbedingungen',
-    cookiePolicy: 'Cookie-Richtlinie'
+    cookiePolicy: 'Cookie-Richtlinie',
+
+    // Blog
+    blogSubtitle: 'Leitfäden, Tipps und Einblicke in die industrielle Reinigung und professionelle Ausrüstung.',
+    readArticle: 'Artikel lesen',
+    backToBlog: 'Zurück zum Blog',
+    needConsultation: 'Brauchen Sie eine Beratung?',
+    consultationCTA: 'Kontaktieren Sie uns, um herauszufinden, welche Lösung am besten zu Ihren Bedürfnissen passt.',
+    contactUsButton: 'Kontaktieren Sie uns',
+    relatedArticles: 'Verwandte Artikel'
   }
 };

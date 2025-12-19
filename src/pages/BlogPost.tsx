@@ -2,11 +2,24 @@ import React from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import { Calendar, ArrowLeft, Tag } from 'lucide-react';
 import { getBlogPost, getAllBlogPosts } from '../data/blogPosts';
+import { useTranslation } from '../hooks/useTranslation';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
-  const post = slug ? getBlogPost(slug) : undefined;
-  const allPosts = getAllBlogPosts();
+  const { t, currentLanguage } = useTranslation();
+  const post = slug ? getBlogPost(slug, currentLanguage) : undefined;
+  const allPosts = getAllBlogPosts(currentLanguage);
+
+  const getDateLocale = () => {
+    const locales: Record<string, string> = {
+      it: 'it-IT',
+      en: 'en-US',
+      fr: 'fr-FR',
+      es: 'es-ES',
+      de: 'de-DE'
+    };
+    return locales[currentLanguage] || 'it-IT';
+  };
 
   React.useEffect(() => {
     if (post) {
@@ -37,6 +50,7 @@ const BlogPost = () => {
         "description": post.description,
         "image": `https://industrialbrooms.com${post.image}`,
         "datePublished": post.date,
+        "inLanguage": currentLanguage,
         "author": {
           "@type": "Organization",
           "name": "Industrial Brooms"
@@ -66,7 +80,7 @@ const BlogPost = () => {
         }
       };
     }
-  }, [post]);
+  }, [post, currentLanguage]);
 
   if (!post) {
     return <Navigate to="/blog" replace />;
@@ -134,7 +148,7 @@ const BlogPost = () => {
             className="inline-flex items-center text-red-600 hover:text-red-700 transition-colors font-medium"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Torna al Blog
+            {t.backToBlog}
           </Link>
         </nav>
 
@@ -143,7 +157,7 @@ const BlogPost = () => {
           <div className="flex items-center text-gray-500 text-sm mb-4">
             <Calendar className="h-4 w-4 mr-2" />
             <time dateTime={post.date}>
-              {new Date(post.date).toLocaleDateString('it-IT', {
+              {new Date(post.date).toLocaleDateString(getDateLocale(), {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
@@ -188,22 +202,22 @@ const BlogPost = () => {
 
         {/* CTA */}
         <div className="mt-12 bg-red-600 rounded-2xl p-8 text-white text-center">
-          <h3 className="text-2xl font-bold mb-4">Hai bisogno di una consulenza?</h3>
+          <h3 className="text-2xl font-bold mb-4">{t.needConsultation}</h3>
           <p className="mb-6 text-red-100">
-            Contattaci per scoprire quale soluzione è più adatta alle tue esigenze.
+            {t.consultationCTA}
           </p>
           <Link
             to="/#contact"
             className="inline-block bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            Contattaci
+            {t.contactUsButton}
           </Link>
         </div>
 
         {/* Related Posts */}
         {relatedPosts.length > 0 && (
           <div className="mt-16">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Articoli correlati</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">{t.relatedArticles}</h3>
             <div className="grid md:grid-cols-2 gap-6">
               {relatedPosts.map((relatedPost) => (
                 <Link

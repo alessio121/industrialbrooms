@@ -5,8 +5,19 @@ import { getAllBlogPosts } from '../data/blogPosts';
 import { useTranslation } from '../hooks/useTranslation';
 
 const Blog = () => {
-  const { t } = useTranslation();
-  const posts = getAllBlogPosts();
+  const { t, currentLanguage } = useTranslation();
+  const posts = getAllBlogPosts(currentLanguage);
+
+  const getDateLocale = () => {
+    const locales: Record<string, string> = {
+      it: 'it-IT',
+      en: 'en-US',
+      fr: 'fr-FR',
+      es: 'es-ES',
+      de: 'de-DE'
+    };
+    return locales[currentLanguage] || 'it-IT';
+  };
 
   React.useEffect(() => {
     document.title = 'Blog - Industrial Brooms';
@@ -21,7 +32,7 @@ const Blog = () => {
             Blog
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Guide, consigli e approfondimenti sulla pulizia industriale e le attrezzature professionali.
+            {t.blogSubtitle}
           </p>
         </div>
 
@@ -46,7 +57,7 @@ const Blog = () => {
                 <div className="flex items-center text-gray-500 text-sm mb-3">
                   <Calendar className="h-4 w-4 mr-2" />
                   <time dateTime={post.date}>
-                    {new Date(post.date).toLocaleDateString('it-IT', {
+                    {new Date(post.date).toLocaleDateString(getDateLocale(), {
                       year: 'numeric',
                       month: 'long',
                       day: 'numeric'
@@ -68,7 +79,7 @@ const Blog = () => {
                   to={`/blog/${post.slug}`}
                   className="inline-flex items-center text-red-600 font-semibold hover:text-red-700 transition-colors"
                 >
-                  Leggi articolo
+                  {t.readArticle}
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Link>
               </div>
