@@ -1,6 +1,8 @@
 services:
   web:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile.prerender
     ports:
-      - "3002:80"
+      - "127.0.0.1:3002:80"
     restart: unless-stopped
