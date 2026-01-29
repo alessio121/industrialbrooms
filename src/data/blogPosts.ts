@@ -14,15 +14,15 @@ type Language = 'it' | 'en' | 'fr' | 'es' | 'de';
 const italianPosts: BlogPost[] = [
   {
     slug: "scope-industriali-per-cantieri-guida-completa",
-    title: "Scope Industriali per Cantieri: Guida Completa alla Scelta e all'Utilizzo",
-    description: "Scopri le migliori scope industriali per cantieri edili. Guida completa su come scegliere l'attrezzatura giusta per la pulizia di cantieri, demolizioni e lavori stradali.",
+    title: "Scope Industriali per Cantieri: Come Scegliere e Usarle",
+    description: "Le migliori scope industriali per cantieri edili. Come scegliere l'attrezzatura giusta per pulizia di cantieri, demolizioni e lavori stradali.",
     date: "2025-12-26",
     image: "/mod forche 3x1.png",
     keywords: ["scope industriali per cantieri", "pulizia cantieri edili", "attrezzature cantiere", "scope per demolizioni", "pulizia lavori stradali", "scope professionali cantiere", "spazzatrici cantiere"],
     content: `
-## Scope Industriali per Cantieri: Perché Sono Essenziali
+## Scope Industriali per Cantieri: A Cosa Servono
 
-I cantieri edili producono enormi quantità di detriti, polvere e materiali di scarto ogni giorno. La pulizia efficiente di queste aree non è solo una questione di ordine: è fondamentale per la sicurezza dei lavoratori, il rispetto delle normative e l'efficienza del cantiere stesso.
+Ogni giorno un cantiere medio produce dai 500 ai 2000 kg di detriti, polvere e materiali di scarto. Tenere pulite queste aree serve a tre cose: sicurezza dei lavoratori, rispetto delle normative ASL, ed evitare rallentamenti nelle operazioni.
 
 Le **scope industriali per cantieri** rappresentano la soluzione più efficace per mantenere pulite aree di lavoro estese, spesso in condizioni difficili e con materiali pesanti e abrasivi.
 
@@ -151,26 +151,26 @@ Per garantire lunga durata:
 - Pulizia della scopa a fine giornata
 - Sostituzione tempestiva dei componenti usurati
 
-## Conclusione
+## Per Riassumere
 
-Le **scope industriali per cantieri** sono un investimento che si ripaga rapidamente in termini di efficienza, sicurezza e rispetto delle normative. Che si tratti di un piccolo cantiere privato o di un grande appalto pubblico, esiste sempre il modello giusto per le vostre esigenze.
+Un investimento dai 2.000 ai 5.000€ in una scopa industriale si ripaga in 2-3 mesi di utilizzo regolare. Il risparmio di tempo è reale: parliamo di ore al giorno, non minuti.
 
-Contattateci per una consulenza personalizzata: analizzeremo le caratteristiche del vostro cantiere e vi proporremo la soluzione ottimale.
+Scriveteci o chiamateci per capire quale modello fa al caso vostro — vi basta descrivere il cantiere e i materiali da gestire.
     `
   },
   {
     slug: "attrezzature-pulizia-industriale-come-scegliere",
-    title: "Attrezzature per la Pulizia Industriale: Come Scegliere le Migliori per la Tua Azienda",
-    description: "Guida completa alle attrezzature per la pulizia industriale: scope, spazzatrici, sistemi di raccolta. Come scegliere in base al settore e alle esigenze specifiche.",
+    title: "Attrezzature per la Pulizia Industriale: Cosa Scegliere per la Tua Azienda",
+    description: "Attrezzature per la pulizia industriale: scope, spazzatrici, sistemi di raccolta. Come scegliere in base al settore e alle esigenze.",
     date: "2025-12-26",
     image: "/mod attacco forche 2x1.png",
     keywords: ["attrezzature pulizia industriale", "pulizia industriale", "scope professionali", "spazzatrici industriali", "pulizia fabbriche", "attrezzature professionali pulizia", "sistemi pulizia industriale"],
     content: `
-## Attrezzature per la Pulizia Industriale: Una Panoramica Completa
+## Attrezzature per la Pulizia Industriale: Cosa C'è Sul Mercato
 
-La **pulizia industriale** è un aspetto fondamentale per qualsiasi azienda manifatturiera, logistica o di servizi. Un ambiente di lavoro pulito non è solo più piacevole: migliora la sicurezza, aumenta la produttività e contribuisce alla qualità del prodotto finale.
+Parliamo di numeri: un'officina da 2000 mq che non pulisce regolarmente perde circa il 15% di produttività tra tempo perso a cercare attrezzi, infortuni minori e manutenzione extra dei macchinari. La pulizia non è un costo, è un investimento.
 
-In questa guida analizzeremo le principali **attrezzature per la pulizia industriale**, aiutandovi a scegliere quelle più adatte alle vostre specifiche esigenze.
+Vediamo quali attrezzature esistono e quando usare ciascuna.
 
 ## Categorie di Attrezzature per la Pulizia Industriale
 
@@ -320,26 +320,26 @@ Non trascurate la manutenzione:
 - Pulire dopo lavorazioni con oli
 - Proteggere da agenti atmosferici
 
-## Conclusione
+## In Breve
 
-La scelta delle **attrezzature per la pulizia industriale** giuste può trasformare un'operazione costosa e inefficiente in un processo rapido e produttivo. L'investimento iniziale si ripaga in pochi mesi grazie al risparmio di tempo e risorse.
+L'attrezzatura giusta trasforma la pulizia da problema a non-problema. Se avete già un muletto, una scopa con attacco forche da 2.500-4.000€ vi fa risparmiare più di quanto costa nel primo anno.
 
-Non esitate a contattarci per una consulenza personalizzata: vi aiuteremo a identificare la soluzione ottimale per le vostre specifiche esigenze industriali.
+Mandate una mail o chiamate: bastano 10 minuti per capire cosa vi serve.
     `
   },
   {
     slug: "scope-per-muletti-vantaggi-utilizzo",
-    title: "Scope per Muletti: Tutti i Vantaggi dell'Utilizzo con Carrelli Elevatori",
-    description: "Scopri perché le scope per muletti sono la soluzione ideale per la pulizia industriale. Guida completa su modelli, vantaggi e come scegliere quella giusta per il tuo carrello elevatore.",
+    title: "Scope per Muletti: Vantaggi Economici e Pratici",
+    description: "Perché le scope per muletti convengono: modelli, vantaggi e come scegliere quella giusta per il tuo carrello elevatore.",
     date: "2025-12-26",
     image: "/mod forche + lama 2x1.png",
     keywords: ["scope per muletti", "scope carrelli elevatori", "scope attacco forche", "pulizia con muletto", "accessori muletti", "scope forklift", "attrezzature carrelli elevatori"],
     content: `
-## Scope per Muletti: La Soluzione Intelligente per la Pulizia Industriale
+## Scope per Muletti: Il Calcolo Economico
 
-Le **scope per muletti** rappresentano una delle innovazioni più pratiche nel campo della pulizia industriale. Trasformano un comune carrello elevatore in una potente macchina per la pulizia, senza necessità di acquistare veicoli dedicati costosi.
+Ecco i numeri: una spazzatrice semovente costa 25.000-80.000€. Una scopa per muletti costa 2.000-6.000€. Se avete già un muletto in azienda (e chi non ce l'ha?), il risparmio è del 90%.
 
-Se la vostra azienda dispone già di uno o più muletti, questa è probabilmente la soluzione più conveniente e efficace per mantenere puliti i vostri spazi produttivi.
+Ma non è solo una questione di prezzo. È anche praticità: niente secondo veicolo da mantenere, niente spazio garage aggiuntivo, niente formazione extra per gli operatori.
 
 ## Come Funzionano le Scope per Muletti
 
@@ -487,11 +487,11 @@ Con uso corretto:
 - Setole: 1-3 anni (sostituibili)
 - Componenti: alta resistenza all'usura
 
-## Conclusione
+## Il Punto
 
-Le **scope per muletti** rappresentano la scelta più intelligente per chi cerca una soluzione di pulizia industriale efficace, economica e pratica. Trasformate il vostro carrello elevatore in una macchina multifunzione e risparmiate tempo e denaro ogni giorno.
+Il muletto che avete già fa due lavori invece di uno. La matematica è semplice: costo basso, risultato alto, zero complicazioni.
 
-Contattateci per scoprire quale modello è più adatto al vostro muletto e alle vostre esigenze di pulizia.
+Volete sapere quale scopa va bene per il vostro muletto? Mandateci marca, modello e portata — vi rispondiamo in giornata.
     `
   },
   {
@@ -502,11 +502,11 @@ Contattateci per scoprire quale modello è più adatto al vostro muletto e alle 
     image: "/mod forche 3x1.png",
     keywords: ["pulizia capannoni industriali", "pulizia stabilimenti", "pulizia magazzini", "manutenzione capannoni", "igiene industriale", "pulizia pavimenti industriali", "spazzatura capannoni"],
     content: `
-## Pulizia Capannoni Industriali: Una Sfida Quotidiana
+## Pulizia Capannoni Industriali: I Numeri Che Contano
 
-La **pulizia dei capannoni industriali** rappresenta una delle sfide più impegnative per qualsiasi azienda manifatturiera o logistica. Le dimensioni spesso enormi, la presenza di macchinari, il transito continuo di mezzi e personale: tutto contribuisce a rendere questa attività complessa ma assolutamente necessaria.
+Un capannone da 5000 mq accumula circa 200-300 kg di polvere e detriti ogni settimana, a seconda dell'attività. Pulire manualmente richiede 2-3 persone per mezza giornata. Con una scopa industriale su muletto, basta un operatore per 1-2 ore.
 
-In questo articolo esploreremo le soluzioni più efficaci per mantenere puliti i vostri capannoni, migliorando sicurezza, efficienza e immagine aziendale.
+Vediamo come organizzare la pulizia per ottenere risultati senza sprecare tempo.
 
 ## Perché la Pulizia del Capannone è Fondamentale
 
@@ -667,11 +667,11 @@ Investire in pulizia ripaga:
 - Produttività: +5/10%
 - Soddisfazione dipendenti: +20%
 
-## Conclusione
+## Il Calcolo Finale
 
-La **pulizia dei capannoni industriali** non è un costo ma un investimento che si ripaga in sicurezza, efficienza e qualità. Con le attrezzature giuste e una pianificazione accurata, anche i capannoni più grandi possono essere mantenuti in condizioni ottimali.
+Meno infortuni (-30%), macchine che durano di più (+10% efficienza), ambiente di lavoro dove la gente sta volentieri. Non servono grandi discorsi: i numeri parlano.
 
-Contattateci per una consulenza: analizzeremo le caratteristiche del vostro capannone e vi proporremo la soluzione più efficace per le vostre esigenze.
+Mandateci planimetria e foto del capannone — vi diciamo cosa serve in pochi minuti.
     `
   },
   {
@@ -817,17 +817,17 @@ Contattateci per una consulenza personalizzata: analizzeremo le dimensioni e le 
   },
   {
     slug: "come-pulire-trucioli-metallici-officina",
-    title: "Come Pulire Trucioli Metallici in Officina: Guida Completa",
-    description: "Scopri le migliori tecniche e attrezzature per la pulizia efficace dei trucioli metallici in officine meccaniche e fonderie.",
+    title: "Come Pulire Trucioli Metallici in Officina: Tecniche e Attrezzature",
+    description: "Tecniche e attrezzature per la pulizia dei trucioli metallici in officine meccaniche e fonderie.",
     date: "2025-12-19",
     image: "/mod attacco forche 2x1.png",
     keywords: ["trucioli metallici", "pulizia officina", "scope industriali", "officina meccanica"],
     content: `
-## Introduzione
+## Il Problema dei Trucioli
 
-La gestione dei trucioli metallici rappresenta una delle sfide quotidiane più importanti per qualsiasi officina meccanica o fonderia. I trucioli, residui inevitabili delle lavorazioni di fresatura, tornitura e foratura, possono accumularsi rapidamente creando problemi di sicurezza, efficienza e qualità del lavoro.
+Un tornio produce dai 5 ai 20 kg di trucioli all'ora. Una fresa, anche di più. Lasciarli accumularsi sul pavimento significa rischiare infortuni, rovinare pezzi finiti, e rendere il lavoro più lento e fastidioso.
 
-In questa guida completa, esploreremo le migliori pratiche e le attrezzature più efficaci per mantenere la vostra officina pulita e sicura.
+Qui vediamo cosa funziona davvero per tenerli sotto controllo.
 
 ## Perché è Importante una Pulizia Efficace
 
@@ -915,11 +915,11 @@ I trucioli raccolti devono essere stoccati correttamente:
 - Separazione per tipologia di materiale (se richiesto per il riciclo)
 - Posizionamento strategico per minimizzare i percorsi
 
-## Conclusione
+## Cosa Fare
 
-Una pulizia efficace dei trucioli metallici non è solo una questione di ordine, ma un investimento in sicurezza, efficienza e qualità. Scegliere le attrezzature giuste e stabilire procedure chiare può fare la differenza tra un'officina caotica e un ambiente di lavoro professionale e produttivo.
+Stabilite una routine di pulizia (fine turno, minimo). Usate l'attrezzatura giusta per il tipo di truciolo. Fatevi i conti: quanto tempo perdete ora? Quanto ne risparmiereste?
 
-Contattateci per una consulenza sulle soluzioni più adatte alle vostre esigenze specifiche.
+Mandateci una foto dei trucioli che producete — vi diciamo quale scopa li raccoglie meglio.
     `
   },
   {
@@ -930,11 +930,11 @@ Contattateci per una consulenza sulle soluzioni più adatte alle vostre esigenze
     image: "/mod forche 3x1.png",
     keywords: ["scope industriali", "come scegliere", "attrezzature pulizia", "officina"],
     content: `
-## Introduzione
+## Prima di Comprare: Le Domande Giuste
 
-Scegliere la scopa industriale giusta può sembrare semplice, ma le variabili da considerare sono molte. Dimensioni dell'area da pulire, tipo di materiale da raccogliere, mezzi disponibili: ogni fattore influenza la scelta ottimale.
+Ogni settimana riceviamo chiamate di clienti che hanno comprato la scopa sbagliata. Il problema? Non si sono fatti le domande giuste prima.
 
-In questa guida analizzeremo le diverse tipologie di scope industriali per aiutarvi a identificare la soluzione perfetta per le vostre esigenze.
+Tre cose contano davvero: quanto è grande l'area (in metri quadri, non "grande" o "piccola"), cosa dovete raccogliere (trucioli corti, lunghi, polvere, misto), e che mezzi avete già (muletti, portata, altezza forche).
 
 ## Fattori da Considerare
 
@@ -1014,9 +1014,9 @@ Per trucioli lunghi e materiali aggrovigliati:
 5. **Valutate lo spazio** di stoccaggio per la scopa
 6. **Definite il budget** disponibile
 
-## Conclusione
+## Cosa Fare Adesso
 
-La scelta della scopa industriale giusta è un investimento che ripaga in termini di efficienza, sicurezza e qualità dell'ambiente di lavoro. Non esitate a contattarci per una consulenza personalizzata: analizzeremo insieme le vostre esigenze e vi proporremo la soluzione ottimale.
+Prendete carta e penna. Scrivete: metri quadri, materiale principale, muletto (sì/no e portata). Con questi tre dati vi diciamo in 5 minuti quale scopa vi serve. Niente giri di parole.
     `
   },
   {
@@ -1027,9 +1027,9 @@ La scelta della scopa industriale giusta è un investimento che ripaga in termin
     image: "/mod forche + lama 2x1.png",
     keywords: ["scope attacco forche", "muletti", "carrelli elevatori", "pulizia industriale"],
     content: `
-## Cosa Sono le Scope con Attacco Forche
+## Come Funziona l'Attacco Forche
 
-Le scope con attacco forche sono attrezzature di pulizia industriale progettate per essere montate direttamente sulle forche di un carrello elevatore (muletto). Questa configurazione trasforma un comune muletto in una potente macchina per la pulizia, senza necessità di investimenti aggiuntivi in veicoli dedicati.
+L'idea è semplice: due alloggiamenti tubolari in acciaio dove infilate le forche del muletto. 30 secondi di montaggio, zero attrezzi. La scopa pesa dai 200 ai 500 kg a seconda del modello, quindi serve un muletto con portata adeguata (minimo 1,5 tonnellate per i modelli piccoli).
 
 ## Vantaggi Principali
 
@@ -1135,11 +1135,11 @@ Per garantire lunga durata:
 - Sostituite i componenti usurati
 - Pulite la scopa dopo ogni utilizzo intensivo
 
-## Conclusione
+## Quando Ha Senso (e Quando No)
 
-Le scope con attacco forche rappresentano la soluzione più efficiente per la pulizia industriale in ambienti dove è già presente un carrello elevatore. L'investimento è contenuto rispetto all'acquisto di macchinari dedicati, e i benefici in termini di tempo e qualità della pulizia sono immediati.
+Ha senso se: avete un muletto, l'area da pulire supera i 500 mq, pulite almeno una volta al giorno. Non ha senso se: l'area è piccola, piena di ostacoli, o non avete muletti.
 
-Contattateci per scoprire quale modello è più adatto alle vostre esigenze.
+Per capire se fa al caso vostro, mandateci una foto del pavimento sporco e le dimensioni. Vi diciamo subito se conviene.
     `
   }
 ];
@@ -1148,15 +1148,15 @@ Contattateci per scoprire quale modello è più adatto alle vostre esigenze.
 const englishPosts: BlogPost[] = [
   {
     slug: "industrial-brooms-construction-sites-complete-guide",
-    title: "Industrial Brooms for Construction Sites: Complete Guide to Selection and Use",
-    description: "Find the best industrial brooms for construction sites. Complete guide on choosing the right equipment for site cleaning, demolition work, and road construction.",
+    title: "Industrial Brooms for Construction Sites: Selection and Use",
+    description: "Best industrial brooms for construction sites. How to choose the right equipment for site cleaning, demolition work, and road construction.",
     date: "2025-12-26",
     image: "/mod forche 3x1.png",
     keywords: ["industrial brooms construction sites", "construction site cleaning", "site cleaning equipment", "demolition brooms", "road construction cleaning", "professional site brooms", "construction sweepers"],
     content: `
-## Industrial Brooms for Construction Sites: Why They're Essential
+## Industrial Brooms for Construction Sites: The Real Numbers
 
-Construction sites generate massive amounts of debris, dust, and waste materials every day. Efficient cleaning of these areas isn't just about tidiness—it's crucial for worker safety, regulatory compliance, and overall site efficiency.
+A typical construction site generates 500-2000 kg of debris daily. Manual cleanup takes 4-6 hours. With an industrial broom on a forklift, you're looking at 30-45 minutes. That's the difference we're talking about.
 
 **Industrial brooms for construction sites** offer the most effective solution for keeping large work areas clean, often under challenging conditions with heavy, abrasive materials.
 
@@ -1285,26 +1285,26 @@ To ensure long service life:
 - Clean the broom at end of day
 - Replace worn components promptly
 
-## Conclusion
+## Bottom Line
 
-**Industrial brooms for construction sites** are an investment that pays for itself quickly through improved efficiency, safety, and compliance. Whether it's a small private build or a major public contract, there's always the right model for your needs.
+A €2,000-5,000 broom pays for itself in 2-3 months of regular use. The time savings are measured in hours, not minutes.
 
-Contact us for personalized advice: we'll analyze your site characteristics and recommend the optimal solution.
+Send us a message describing your site and materials — we'll tell you exactly what you need.
     `
   },
   {
     slug: "industrial-cleaning-equipment-how-to-choose",
-    title: "Industrial Cleaning Equipment: How to Choose the Best for Your Business",
-    description: "Complete guide to industrial cleaning equipment: brooms, sweepers, collection systems. How to choose based on your industry and specific needs.",
+    title: "Industrial Cleaning Equipment: What to Choose for Your Business",
+    description: "Industrial cleaning equipment: brooms, sweepers, collection systems. How to choose based on your industry and needs.",
     date: "2025-12-26",
     image: "/mod attacco forche 2x1.png",
     keywords: ["industrial cleaning equipment", "industrial cleaning", "professional brooms", "industrial sweepers", "factory cleaning", "professional cleaning equipment", "industrial cleaning systems"],
     content: `
-## Industrial Cleaning Equipment: A Complete Overview
+## Industrial Cleaning Equipment: What's Available
 
-**Industrial cleaning** is a fundamental aspect for any manufacturing, logistics, or service company. A clean work environment isn't just more pleasant—it improves safety, increases productivity, and contributes to final product quality.
+Let's talk numbers: a 2000 sqm workshop that doesn't clean regularly loses about 15% productivity. Time wasted searching for tools, minor injuries, extra machine maintenance — it adds up.
 
-This guide analyzes the main **industrial cleaning equipment** options, helping you choose what best fits your specific needs.
+Here's what equipment exists and when to use each type.
 
 ## Categories of Industrial Cleaning Equipment
 
@@ -1454,11 +1454,11 @@ Don't neglect maintenance:
 - Clean after oily work
 - Protect from weather
 
-## Conclusion
+## The Short Version
 
-Choosing the right **industrial cleaning equipment** can transform a costly, inefficient operation into a quick, productive process. The initial investment pays back within months through time and resource savings.
+The right equipment turns cleaning from a problem into a non-problem. If you have a forklift, a €2,500-4,000 fork-mounted broom saves more than it costs in the first year.
 
-Don't hesitate to contact us for personalized advice: we'll help identify the optimal solution for your specific industrial needs.
+Send an email or call — 10 minutes is all we need to figure out what you need.
     `
   },
   {
@@ -1469,11 +1469,11 @@ Don't hesitate to contact us for personalized advice: we'll help identify the op
     image: "/mod forche + lama 2x1.png",
     keywords: ["forklift brooms", "forklift sweeper attachment", "fork attachment brooms", "forklift cleaning", "forklift accessories", "lift truck brooms", "forklift equipment"],
     content: `
-## Forklift Brooms: The Smart Solution for Industrial Cleaning
+## Forklift Brooms: The Math Makes Sense
 
-**Forklift brooms** represent one of the most practical innovations in industrial cleaning. They transform an ordinary lift truck into a powerful cleaning machine, without needing to purchase expensive dedicated vehicles.
+Here's the comparison: a ride-on sweeper costs €25,000-80,000. A forklift broom costs €2,000-6,000. If you already have a forklift (and most factories do), you save 90% of the investment.
 
-If your company already has one or more forklifts, this is probably the most convenient and effective solution for keeping your production spaces clean.
+Beyond price, think logistics: no second vehicle to maintain, no extra garage space, no additional operator training.
 
 ## How Forklift Brooms Work
 
@@ -1621,11 +1621,11 @@ With proper use:
 - Bristles: 1-3 years (replaceable)
 - Components: high wear resistance
 
-## Conclusion
+## The Simple Truth
 
-**Forklift brooms** represent the smartest choice for anyone seeking effective, economical, and practical industrial cleaning. Transform your lift truck into a multi-function machine and save time and money every day.
+Your forklift does two jobs instead of one. Low cost, high output, zero complications.
 
-Contact us to discover which model best suits your forklift and cleaning needs.
+Want to know which broom fits your forklift? Send us the make, model, and capacity — we'll reply within 24 hours.
     `
   },
   {
@@ -1636,11 +1636,11 @@ Contact us to discover which model best suits your forklift and cleaning needs.
     image: "/mod forche 3x1.png",
     keywords: ["industrial warehouse cleaning", "facility cleaning", "warehouse cleaning", "warehouse maintenance", "industrial hygiene", "industrial floor cleaning", "warehouse sweeping"],
     content: `
-## Industrial Warehouse Cleaning: A Daily Challenge
+## Industrial Warehouse Cleaning: The Numbers That Matter
 
-**Industrial warehouse cleaning** represents one of the most demanding challenges for any manufacturing or logistics company. The often enormous dimensions, presence of machinery, continuous traffic of vehicles and personnel—everything contributes to making this activity complex but absolutely necessary.
+A 5000 sqm warehouse accumulates 200-300 kg of dust and debris weekly, depending on activity. Manual cleaning needs 2-3 people for half a day. With an industrial broom on a forklift, one operator handles it in 1-2 hours.
 
-This article explores the most effective solutions for keeping your warehouses clean, improving safety, efficiency, and company image.
+Here's how to organize cleaning for results without wasting time.
 
 ## Why Warehouse Cleaning is Critical
 
@@ -1801,11 +1801,11 @@ Investing in cleaning pays off:
 - Productivity: +5/10%
 - Employee satisfaction: +20%
 
-## Conclusion
+## The Final Calculation
 
-**Industrial warehouse cleaning** is not a cost but an investment that pays back in safety, efficiency, and quality. With the right equipment and careful planning, even the largest warehouses can be maintained in optimal condition.
+Fewer injuries (-30%), machines that last longer (+10% efficiency), a work environment people actually want to be in. The numbers speak for themselves.
 
-Contact us for a consultation: we'll analyze your warehouse characteristics and propose the most effective solution for your needs.
+Send us a floor plan and photos — we'll tell you what you need in minutes.
     `
   },
   {
@@ -1951,17 +1951,17 @@ Contact us for personalized advice: we will analyze the size and characteristics
   },
   {
     slug: "how-to-clean-metal-chips-workshop",
-    title: "How to Clean Metal Chips in Your Workshop: Complete Guide",
-    description: "Discover the best techniques and equipment for effective metal chip cleaning in machine shops and foundries.",
+    title: "How to Clean Metal Chips in Your Workshop: Techniques and Tools",
+    description: "Best techniques and equipment for metal chip cleaning in machine shops and foundries.",
     date: "2025-12-19",
     image: "/mod attacco forche 2x1.png",
     keywords: ["metal chips", "workshop cleaning", "industrial brooms", "machine shop", "swarf removal"],
     content: `
-## Introduction
+## The Chip Problem
 
-Managing metal chips is one of the most important daily challenges for any machine shop or foundry. Chips, the inevitable residue from milling, turning, and drilling operations, can accumulate quickly, creating safety, efficiency, and work quality issues.
+A lathe produces 5-20 kg of chips per hour. A milling machine, even more. Let them pile up on the floor and you're looking at injury risks, damaged finished parts, and slower, more frustrating work.
 
-In this comprehensive guide, we'll explore the best practices and most effective equipment to keep your workshop clean and safe.
+Here's what actually works to keep them under control.
 
 ## Why Effective Cleaning Matters
 
@@ -2049,11 +2049,11 @@ Collected chips must be stored properly:
 - Separation by material type (if required for recycling)
 - Strategic positioning to minimize travel distances
 
-## Conclusion
+## What to Do
 
-Effective metal chip cleaning is not just about tidiness, but an investment in safety, efficiency, and quality. Choosing the right equipment and establishing clear procedures can make the difference between a chaotic workshop and a professional, productive work environment.
+Set up a cleaning routine (end of shift, minimum). Use the right tool for your chip type. Do the math: how much time are you losing now? How much would you save?
 
-Contact us for advice on solutions tailored to your specific needs.
+Send us a photo of the chips you produce — we'll tell you which broom collects them best.
     `
   },
   {
@@ -2064,11 +2064,11 @@ Contact us for advice on solutions tailored to your specific needs.
     image: "/mod forche 3x1.png",
     keywords: ["industrial brooms", "how to choose", "cleaning equipment", "workshop", "forklift broom"],
     content: `
-## Introduction
+## Before You Buy: Ask the Right Questions
 
-Choosing the right industrial broom may seem simple, but there are many variables to consider. Size of the area to clean, type of material to collect, available equipment: each factor influences the optimal choice.
+Every week we get calls from customers who bought the wrong broom. The problem? They didn't ask the right questions first.
 
-In this guide, we'll analyze the different types of industrial brooms to help you identify the perfect solution for your needs.
+Three things matter: how big is the area (in square meters, not "big" or "small"), what you need to collect (short chips, long chips, dust, mixed), and what equipment you already have (forklifts, capacity, fork height).
 
 ## Factors to Consider
 
@@ -2148,9 +2148,9 @@ For long chips and tangled materials:
 5. **Evaluate storage space** for the broom
 6. **Define your budget**
 
-## Conclusion
+## What to Do Now
 
-Choosing the right industrial broom is an investment that pays off in terms of efficiency, safety, and work environment quality. Don't hesitate to contact us for personalized advice: we'll analyze your needs together and propose the optimal solution.
+Get a piece of paper. Write down: square meters, main material, forklift (yes/no and capacity). With these three pieces of info, we can tell you in 5 minutes which broom you need. No fluff.
     `
   },
   {
@@ -2161,9 +2161,9 @@ Choosing the right industrial broom is an investment that pays off in terms of e
     image: "/mod forche + lama 2x1.png",
     keywords: ["forklift attachment broom", "forklift", "industrial cleaning", "warehouse cleaning"],
     content: `
-## What Are Forklift Attachment Brooms
+## How Fork Attachment Works
 
-Forklift attachment brooms are industrial cleaning equipment designed to be mounted directly on the forks of a forklift truck. This configuration transforms a common forklift into a powerful cleaning machine, without the need for additional investment in dedicated vehicles.
+The concept is simple: two tubular steel housings where you slide in the forklift forks. 30 seconds to mount, no tools needed. The broom weighs 200-500 kg depending on model, so you need a forklift with adequate capacity (minimum 1.5 tons for small models).
 
 ## Main Advantages
 
@@ -2269,11 +2269,11 @@ To ensure long life:
 - Replace worn components
 - Clean the broom after each intensive use
 
-## Conclusion
+## When It Makes Sense (and When It Doesn't)
 
-Forklift attachment brooms represent the most efficient solution for industrial cleaning in environments where a forklift is already present. The investment is modest compared to purchasing dedicated machinery, and the benefits in terms of time and cleaning quality are immediate.
+It makes sense if: you have a forklift, the area is over 500 sqm, you clean at least once daily. It doesn't make sense if: the area is small, full of obstacles, or you don't have forklifts.
 
-Contact us to find out which model best suits your needs.
+To figure out if it's right for you, send us a photo of your dirty floor and the dimensions. We'll tell you straight away.
     `
   }
 ];
