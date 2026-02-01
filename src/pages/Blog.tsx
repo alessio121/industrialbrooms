@@ -5,7 +5,7 @@ import { getAllBlogPosts } from '../data/blogPosts';
 import { useTranslation } from '../hooks/useTranslation';
 
 const Blog = () => {
-  const { t, currentLanguage } = useTranslation();
+  const { t, currentLanguage, localizedPath } = useTranslation();
   const posts = getAllBlogPosts(currentLanguage);
 
   const getDateLocale = () => {
@@ -42,7 +42,7 @@ const Blog = () => {
               key={post.slug}
               className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 overflow-hidden border border-gray-100"
             >
-              <Link to={`/blog/${post.slug}`}>
+              <Link to={localizedPath(`/blog/${post.slug}`)}>
                 <div className="relative overflow-hidden h-48">
                   <img
                     src={post.image}
@@ -65,7 +65,7 @@ const Blog = () => {
                   </time>
                 </div>
 
-                <Link to={`/blog/${post.slug}`}>
+                <Link to={localizedPath(`/blog/${post.slug}`)}>
                   <h2 className="text-xl font-bold text-gray-900 mb-3 hover:text-red-600 transition-colors line-clamp-2">
                     {post.title}
                   </h2>
@@ -76,7 +76,7 @@ const Blog = () => {
                 </p>
 
                 <Link
-                  to={`/blog/${post.slug}`}
+                  to={localizedPath(`/blog/${post.slug}`)}
                   className="inline-flex items-center text-red-600 font-semibold hover:text-red-700 transition-colors"
                 >
                   {t.readArticle}

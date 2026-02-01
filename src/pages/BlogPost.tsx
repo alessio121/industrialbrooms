@@ -6,7 +6,7 @@ import { useTranslation } from '../hooks/useTranslation';
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
-  const { t, currentLanguage } = useTranslation();
+  const { t, currentLanguage, localizedPath } = useTranslation();
   const post = slug ? getBlogPost(slug, currentLanguage) : undefined;
   const allPosts = getAllBlogPosts(currentLanguage);
 
@@ -51,6 +51,7 @@ const BlogPost = () => {
         "image": `https://industrialbrooms.com${post.image}`,
         "datePublished": post.date,
         "inLanguage": currentLanguage,
+        "url": `https://industrialbrooms.com/${currentLanguage}/blog/${slug}`,
         "author": {
           "@type": "Organization",
           "name": "Industrial Brooms"
@@ -80,10 +81,10 @@ const BlogPost = () => {
         }
       };
     }
-  }, [post, currentLanguage]);
+  }, [post, currentLanguage, slug]);
 
   if (!post) {
-    return <Navigate to="/blog" replace />;
+    return <Navigate to={localizedPath('/blog')} replace />;
   }
 
   // Get related posts (excluding current)
@@ -144,7 +145,7 @@ const BlogPost = () => {
         {/* Breadcrumb */}
         <nav className="mb-8">
           <Link
-            to="/blog"
+            to={localizedPath('/blog')}
             className="inline-flex items-center text-red-600 hover:text-red-700 transition-colors font-medium"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
@@ -207,7 +208,7 @@ const BlogPost = () => {
             {t.consultationCTA}
           </p>
           <Link
-            to="/#contact"
+            to={`/${currentLanguage}#contact`}
             className="inline-block bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             {t.contactUsButton}
@@ -222,7 +223,7 @@ const BlogPost = () => {
               {relatedPosts.map((relatedPost) => (
                 <Link
                   key={relatedPost.slug}
-                  to={`/blog/${relatedPost.slug}`}
+                  to={localizedPath(`/blog/${relatedPost.slug}`)}
                   className="group bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors"
                 >
                   <h4 className="font-bold text-gray-900 group-hover:text-red-600 transition-colors mb-2">

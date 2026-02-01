@@ -1,36 +1,84 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, ReactNode } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { translations } from '../utils/translations';
+import { getTranslatedSlug } from '../utils/blogSlugMapping';
 
-type Language = 'it' | 'en' | 'fr' | 'es' | 'de';
+export type Language = 'it' | 'en' | 'fr' | 'es' | 'de';
+
+const SUPPORTED_LANGUAGES: Language[] = ['it', 'en', 'fr', 'es', 'de'];
+
+export const isValidLanguage = (lang: string): lang is Language => {
+  return SUPPORTED_LANGUAGES.includes(lang as Language);
+};
 
 interface TranslationContextType {
   currentLanguage: Language;
   changeLanguage: (lang: Language) => void;
+  localizedPath: (path: string) => string;
   t: typeof translations.it;
 }
 
 const TranslationContext = createContext<TranslationContextType | undefined>(undefined);
 
-export const TranslationProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [currentLanguage, setCurrentLanguage] = useState<Language>(() => {
-    const saved = localStorage.getItem('language');
-    return (saved as Language) || 'it';
-  });
+interface TranslationProviderProps {
+  children: ReactNode;
+  language: Language;
+}
 
-  const changeLanguage = (lang: Language) => {
-    setCurrentLanguage(lang);
-    localStorage.setItem('language', lang);
+export const TranslationProvider: React.FC<TranslationProviderProps> = ({ children, language }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Save language preference to localStorage when it changes
+  React.useEffect(() => {
+    localStorage.setItem('language', language);
+  }, [language]);
+
+  const changeLanguage = (newLang: Language) => {
+    // Get current path without the language prefix
+    const currentPath = location.pathname;
+    const pathParts = currentPath.split('/').filter(Boolean);
+
+    // Remove the current language prefix
+    if (pathParts.length > 0 && isValidLanguage(pathParts[0])) {
+      pathParts.shift();
+    }
+
+    // Handle blog post slug translation
+    if (pathParts[0] === 'blog' && pathParts[1]) {
+      const currentSlug = pathParts[1];
+      const translatedSlug = getTranslatedSlug(currentSlug, newLang);
+      if (translatedSlug) {
+        navigate(`/${newLang}/blog/${translatedSlug}${location.hash}`);
+      } else {
+        // Slug not found in mapping, go to blog listing
+        navigate(`/${newLang}/blog${location.hash}`);
+      }
+      return;
+    }
+
+    // Build new path with new language prefix
+    const newPath = pathParts.length > 0
+      ? `/${newLang}/${pathParts.join('/')}`
+      : `/${newLang}`;
+
+    navigate(`${newPath}${location.hash}`);
   };
 
-  useEffect(() => {
-    localStorage.setItem('language', currentLanguage);
-  }, [currentLanguage]);
+  const localizedPath = (path: string): string => {
+    // If path starts with /, add the language prefix
+    if (path.startsWith('/')) {
+      return `/${language}${path}`;
+    }
+    return `/${language}/${path}`;
+  };
 
-  const t = translations[currentLanguage];
+  const t = translations[language];
 
   const value = {
-    currentLanguage,
+    currentLanguage: language,
     changeLanguage,
+    localizedPath,
     t
   };
 

@@ -1,11 +1,14 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { useTranslation } from '../hooks/useTranslation';
 import { seoTranslations } from '../utils/seoTranslations';
 
 const BASE_URL = 'https://industrialbrooms.com';
+const LANGUAGES = ['it', 'en', 'fr', 'es', 'de'] as const;
 
 const SEOHead: React.FC = () => {
   const { currentLanguage } = useTranslation();
+  const location = useLocation();
   const seo = seoTranslations[currentLanguage];
 
   React.useEffect(() => {
@@ -54,27 +57,38 @@ const SEOHead: React.FC = () => {
     // Update HTML lang attribute
     document.documentElement.setAttribute('lang', currentLanguage);
 
-    // Update canonical URL for current language
-    const canonicalUrl = currentLanguage === 'it'
-      ? BASE_URL
-      : `${BASE_URL}/?lang=${currentLanguage}`;
+    // Get the path without language prefix for hreflang
+    const pathParts = location.pathname.split('/').filter(Boolean);
+    // Remove language prefix if present
+    if (pathParts.length > 0 && LANGUAGES.includes(pathParts[0] as typeof LANGUAGES[number])) {
+      pathParts.shift();
+    }
+    const pathWithoutLang = pathParts.length > 0 ? `/${pathParts.join('/')}` : '';
 
-    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    // Update canonical URL for current language
+    const canonicalUrl = `${BASE_URL}/${currentLanguage}${pathWithoutLang}`;
+
+    const canonicalLink = document.querySelector('link[rel="canonical"]');
     if (canonicalLink) {
       canonicalLink.setAttribute('href', canonicalUrl);
     }
 
     // Update hreflang tags dynamically
-    const languages = ['it', 'en', 'fr', 'es', 'de'];
-    languages.forEach(lang => {
+    LANGUAGES.forEach((lang: typeof LANGUAGES[number]) => {
       const hreflang = document.querySelector(`link[hreflang="${lang}"]`);
       if (hreflang) {
-        const url = lang === 'it' ? `${BASE_URL}/?lang=it` : `${BASE_URL}/?lang=${lang}`;
+        const url = `${BASE_URL}/${lang}${pathWithoutLang}`;
         hreflang.setAttribute('href', url);
       }
     });
 
-  }, [currentLanguage, seo]);
+    // Update x-default to point to Italian version
+    const xDefault = document.querySelector('link[hreflang="x-default"]');
+    if (xDefault) {
+      xDefault.setAttribute('href', `${BASE_URL}/it${pathWithoutLang}`);
+    }
+
+  }, [currentLanguage, seo, location.pathname]);
 
   return null;
 };

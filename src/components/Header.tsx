@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, Search, Phone, Mail, ChevronDown } from 'lucide-react';
+import { Menu, X, Search, ChevronDown } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 
 const Header = () => {
-  const { t, currentLanguage, changeLanguage } = useTranslation();
+  const { t, currentLanguage, changeLanguage, localizedPath } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const location = useLocation();
@@ -19,8 +19,14 @@ const Header = () => {
   ];
 
   const handleLanguageChange = (langCode: string) => {
-    changeLanguage(langCode as any);
+    changeLanguage(langCode as 'it' | 'en' | 'fr' | 'es' | 'de');
     setIsLanguageOpen(false);
+  };
+
+  const isHomePage = () => {
+    // Check if we're on the home page (just /:lang)
+    const pathParts = location.pathname.split('/').filter(Boolean);
+    return pathParts.length === 1;
   };
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
@@ -28,8 +34,8 @@ const Header = () => {
     setIsMenuOpen(false);
 
     // If we're not on the home page, navigate there first
-    if (location.pathname !== '/') {
-      navigate('/', { state: { scrollTo: targetId } });
+    if (!isHomePage()) {
+      navigate(`/${currentLanguage}`, { state: { scrollTo: targetId } });
       return;
     }
 
@@ -48,10 +54,10 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-            
+
             </div>
           </div>
-          
+
           <nav className="hidden md:flex space-x-8">
             <a href="#home" onClick={(e) => handleNavClick(e, 'home')} className="text-white hover:text-gray-200 font-bold text-lg transition-colors cursor-pointer">{t.home}</a>
             <a href="#products" onClick={(e) => handleNavClick(e, 'products')} className="text-white hover:text-gray-200 font-bold text-lg transition-colors cursor-pointer">{t.industrialBrooms}</a>
@@ -59,13 +65,13 @@ const Header = () => {
             <a href="#maka-control" onClick={(e) => handleNavClick(e, 'maka-control')} className="text-white hover:text-gray-200 font-bold text-lg transition-colors cursor-pointer">{t.makaControl}</a>
             <a href="#cassoni" onClick={(e) => handleNavClick(e, 'cassoni')} className="text-white hover:text-gray-200 font-bold text-lg transition-colors cursor-pointer">{t.containers}</a>
             <a href="#tramoggia" onClick={(e) => handleNavClick(e, 'tramoggia')} className="text-white hover:text-gray-200 font-bold text-lg transition-colors cursor-pointer">{t.hopper}</a>
-            <Link to="/blog" className="text-white hover:text-gray-200 font-bold text-lg transition-colors">Blog</Link>
+            <Link to={localizedPath('/blog')} className="text-white hover:text-gray-200 font-bold text-lg transition-colors">Blog</Link>
             <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-white hover:text-gray-200 font-bold text-lg transition-colors cursor-pointer">{t.contact}</a>
           </nav>
-          
+
           <div className="flex items-center space-x-4">
             <Search className="h-5 w-5 text-white hover:text-gray-200 cursor-pointer transition-colors" />
-            
+
             {/* Language Selector */}
             <div className="relative">
               <button
@@ -75,7 +81,7 @@ const Header = () => {
                 <span className="text-xl">{languages.find(lang => lang.code === currentLanguage)?.flag}</span>
                 <ChevronDown className="h-4 w-4" />
               </button>
-              
+
               {isLanguageOpen && (
                 <div className="absolute right-0 top-full mt-2 bg-white rounded-lg shadow-lg border border-gray-200 py-2 min-w-[150px] z-50">
                   {languages.map((language) => (
@@ -93,13 +99,13 @@ const Header = () => {
                 </div>
               )}
             </div>
-            
+
             <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
-        
+
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-red-500">
@@ -109,9 +115,9 @@ const Header = () => {
               <a href="#maka-control" onClick={(e) => handleNavClick(e, 'maka-control')} className="block px-3 py-2 text-white hover:text-gray-200 font-bold text-lg cursor-pointer">{t.makaControl}</a>
               <a href="#cassoni" onClick={(e) => handleNavClick(e, 'cassoni')} className="block px-3 py-2 text-white hover:text-gray-200 font-bold text-lg cursor-pointer">{t.containers}</a>
               <a href="#tramoggia" onClick={(e) => handleNavClick(e, 'tramoggia')} className="block px-3 py-2 text-white hover:text-gray-200 font-bold text-lg cursor-pointer">{t.hopper}</a>
-              <Link to="/blog" onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-white hover:text-gray-200 font-bold text-lg">Blog</Link>
+              <Link to={localizedPath('/blog')} onClick={() => setIsMenuOpen(false)} className="block px-3 py-2 text-white hover:text-gray-200 font-bold text-lg">Blog</Link>
               <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="block px-3 py-2 text-white hover:text-gray-200 font-bold text-lg cursor-pointer">{t.contact}</a>
-              
+
               {/* Mobile Language Selector */}
               <div className="px-3 py-2">
                 <div className="text-white font-bold text-lg mb-2">{t.language}</div>
@@ -121,8 +127,8 @@ const Header = () => {
                       key={language.code}
                       onClick={() => handleLanguageChange(language.code)}
                       className={`px-3 py-2 rounded-lg flex items-center space-x-2 text-sm ${
-                        currentLanguage === language.code 
-                          ? 'bg-red-600 text-white' 
+                        currentLanguage === language.code
+                          ? 'bg-red-600 text-white'
                           : 'bg-white text-gray-700 hover:bg-gray-100'
                       }`}
                     >

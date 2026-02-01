@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { useTranslation } from '../hooks/useTranslation';
 
 const Footer = () => {
-  const { t } = useTranslation();
+  const { t, currentLanguage, localizedPath } = useTranslation();
 
   return (
     <footer className="bg-black text-white py-12">
@@ -19,8 +19,7 @@ const Footer = () => {
                 <span className="text-white">+41 78 214 26 00</span>
               </div>
               <div className="flex items-center space-x-3">
-               
-               
+
               </div>
             </div>
           </div>
@@ -29,25 +28,25 @@ const Footer = () => {
           <div className="md:col-span-1">
             <h3 className="text-xl font-bold mb-4">{t.quickLinks}</h3>
             <div className="grid grid-cols-2 gap-x-6 gap-y-2">
-              <a href="#products" className="text-white hover:text-red-500 transition-colors">
+              <a href={`/${currentLanguage}#products`} className="text-white hover:text-red-500 transition-colors">
                 {t.industrialBrooms}
               </a>
-              <a href="#scopa-manuale" className="text-white hover:text-red-500 transition-colors">
+              <a href={`/${currentLanguage}#scopa-manuale`} className="text-white hover:text-red-500 transition-colors">
                 {t.manualBroom}
               </a>
-              <a href="#maka-control" className="text-white hover:text-red-500 transition-colors">
+              <a href={`/${currentLanguage}#maka-control`} className="text-white hover:text-red-500 transition-colors">
                 {t.makaControl}
               </a>
-              <a href="#cassoni" className="text-white hover:text-red-500 transition-colors">
+              <a href={`/${currentLanguage}#cassoni`} className="text-white hover:text-red-500 transition-colors">
                 {t.containers}
               </a>
-              <a href="#tramoggia" className="text-white hover:text-red-500 transition-colors">
+              <a href={`/${currentLanguage}#tramoggia`} className="text-white hover:text-red-500 transition-colors">
                 {t.hopper}
               </a>
-              <Link to="/blog" className="text-white hover:text-red-500 transition-colors">
+              <Link to={localizedPath('/blog')} className="text-white hover:text-red-500 transition-colors">
                 Blog
               </Link>
-              <a href="#contact" className="text-white hover:text-red-500 transition-colors">
+              <a href={`/${currentLanguage}#contact`} className="text-white hover:text-red-500 transition-colors">
                 {t.contact}
               </a>
             </div>
